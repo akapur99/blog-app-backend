@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { Router } from 'express';
 import * as Posts from './controllers/post_controller';
 
@@ -11,8 +12,7 @@ router.get('/', (req, res) => {
 // /your routes will go here
 router.route('/posts')
   .post(Posts.createPost)
-  .get(Posts.getPosts)
-  .search(Posts.search);
+  .get(Posts.getPosts);
 
 router.route('/posts/:postID')
   .put(Posts.updatePost)

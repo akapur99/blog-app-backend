@@ -14,13 +14,6 @@
 * Styling
 * Storing tags as an array (split by white space)
 
-### Screenshots
-
-![](./src/img/Capture1.PNG)
-![](./src/img/Capture2.PNG)
-![](./src/img/Capture3.PNG)
-![](./src/img/Capture4.PNG)
-
 
 
 

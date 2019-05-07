@@ -68,10 +68,13 @@ export const deletePost = (req, res) => {
 };
 
 export const updatePost = (req, res) => {
+  console.log(req.body);
+  const tgs = `${req.body.tags}`;
+
   const fields = {
     title: req.body.title,
     content: req.body.content,
-    tags: req.body.tags.split(' '),
+    tags: tgs.split(' '),
     cover_url: req.body.cover_url,
   };
   console.log(req);
@@ -85,17 +88,6 @@ export const updatePost = (req, res) => {
         cover_url: req.body.cover_url,
       };
       res.json(updated);
-    })
-    .catch((error) => {
-      res.status(500).json({ error });
-    });
-};
-
-
-export const search = (req, res) => {
-  Post.find({ $text: { $search: res.body.term } })
-    .then((result) => {
-      res.json(result);
     })
     .catch((error) => {
       res.status(500).json({ error });
